@@ -1,9 +1,22 @@
-# theverge
+# theverge-api
 
-Unofficial Python client for The Verge. Pulls full-text articles, feeds, newsletters, and author profiles.
+Unofficial Python client for The Verge. Pull full-text articles, section feeds, newsletters, and author profiles into your own projects.
 
-**Not affiliated with or endorsed by The Verge or Vox Media.**
-The Verge produces great journalism. If you use this library, please consider subscribing: [theverge.com/subscribe](https://www.theverge.com/subscribe)
+---
+
+## Disclaimer
+
+**This project is not affiliated with, authorized by, sponsored by, or endorsed by The Verge, Vox Media, or any of their affiliates.** "The Verge" is a trademark of Vox Media, LLC. This is an independent open source project with no relationship to The Verge or its parent company.
+
+## Subscription requirement
+
+**You must have an active paid subscription to The Verge to use this library.**
+
+This library accesses content from The Verge's subscriber RSS feeds, which are provided as a benefit to paying subscribers. Using this library without a subscription violates The Verge's terms of service and undermines the journalism you're reading.
+
+Subscribe here: [theverge.com/subscribe](https://www.theverge.com/subscribe)
+
+By using this library you confirm that you are a current paying subscriber to The Verge.
 
 ---
 
@@ -11,11 +24,10 @@ The Verge produces great journalism. If you use this library, please consider su
 
 ```bash
 pip install httpx
-# clone this repo, then:
+git clone https://github.com/adamnfineco/theverge-api
+cd theverge-api
 pip install -e .
 ```
-
-PyPI package coming once stable.
 
 ## Quick start
 
@@ -40,16 +52,16 @@ print(enriched[0].hero_image.url)
 print(enriched[0].dek)
 ```
 
-## All methods
+## Methods
 
 ### `feed(section="", enrich=False) → list[Article]`
 
-Fetch up to 30 recent articles from a section.
+Up to 30 recent articles from a section.
 
 ```python
-client.feed()                           # homepage — all content
-client.feed("tech")                     # tech section
-client.feed("reviews")                  # reviews
+client.feed()                           # all content
+client.feed("tech")
+client.feed("reviews")
 client.feed("science")
 client.feed("entertainment")
 client.feed("transportation")
@@ -57,12 +69,12 @@ client.feed("games")
 client.feed("ai")
 client.feed("policy")
 client.feed("gadgets")
-client.feed("tech", enrich=True)        # includes hero images + dek
+client.feed("tech", enrich=True)        # adds hero images + dek
 ```
 
 ### `feed_iter(section="", enrich=False) → Iterator[Article]`
 
-Lazily paginate through all articles in a section. RSS for the first batch (full body), `__NEXT_DATA__` for older pages.
+Lazy pagination through all articles in a section.
 
 ```python
 for article in client.feed_iter("games"):
@@ -71,7 +83,7 @@ for article in client.feed_iter("games"):
 
 ### `article(path_or_url) → Article`
 
-Fetch a single article with full body and rich metadata.
+Single article with full body and rich metadata.
 
 ```python
 post = client.article("/tech/941146/thermacell-liv-2-dot-0-smart-mosquito")
@@ -84,7 +96,7 @@ print(post.hero_image.url)
 
 ### `quick_posts() → list[Article]`
 
-Short-form news items (quick posts feed).
+Short-form news items.
 
 ```python
 posts = client.quick_posts()
@@ -95,16 +107,14 @@ posts = client.quick_posts()
 Full-text newsletter feeds.
 
 ```python
-client.newsletter("installer")     # Installer newsletter
-client.newsletter("notepad")       # Notepad
-client.newsletter("regulator")     # Regulator
-client.newsletter("the-stepback")  # The Stepback
-client.newsletter("optimizer")     # Optimizer
+client.newsletter("installer")
+client.newsletter("notepad")
+client.newsletter("regulator")
+client.newsletter("the-stepback")
+client.newsletter("optimizer")
 ```
 
 ### `reviews(enrich=False) → list[Article]`
-
-Reviews feed.
 
 ```python
 reviews = client.reviews(enrich=True)
@@ -116,8 +126,8 @@ Author profile with recent posts.
 
 ```python
 profile = client.author("nilay-patel")
-print(profile.name)
-print(profile.title)
+print(profile.name)           # "Nilay Patel"
+print(profile.title)          # "Editor-in-Chief"
 print(profile.bio)
 for post in profile.recent_posts:
     print(post.title)
@@ -125,7 +135,7 @@ for post in profile.recent_posts:
 
 ### `search(query) → list[Article]`
 
-Keyword search across the latest feed. Matches title, summary, and keywords.
+Keyword search across the latest feed.
 
 ```python
 results = client.search("nvidia rtx spark")
@@ -147,8 +157,6 @@ All site sections and categories.
 
 ```python
 sections = client.sections()
-for s in sections:
-    print(s.title, s.slug)
 ```
 
 ---
@@ -157,35 +165,35 @@ for s in sections:
 
 ```python
 article.title           # str
-article.permalink       # str — full URL
-article.path            # str — relative path
+article.permalink       # str
+article.path            # str
 article.author          # str — display name
-article.authors         # list[Author] — enriched author objects
+article.authors         # list[Author]
 article.published_at    # datetime
 article.updated_at      # datetime | None
-article.summary         # str — one-sentence description
-article.dek             # str | None — subtitle (requires enrich=True or .article())
-article.body_html       # str — full article HTML
+article.summary         # str
+article.dek             # str | None
+article.body_html       # str — full HTML
 article.keywords        # list[str]
 article.categories      # list[Category]
 article.resource_type   # "post" | "quickPost" | "stream" | None
-article.hero_image      # Image | None (requires enrich=True or .article())
-article.image           # Image | None — hero if available, else first from body
-article.is_live         # bool — live blog active
-article.wp_id           # int — WordPress post ID
+article.hero_image      # Image | None
+article.image           # Image | None — hero or first from body
+article.is_live         # bool
+article.wp_id           # int
 article.is_quick_post   # bool
 article.is_stream       # bool
-article.to_dict()       # dict — JSON-serializable
+article.to_dict()       # JSON-serializable dict
 ```
 
 ## Author fields
 
 ```python
 profile.name
-profile.title           # job title e.g. "Editor in Chief"
+profile.title
 profile.bio
 profile.profile_image_url
-profile.feed_link       # RSS feed URL for this author
+profile.feed_link
 profile.social_links    # list[dict]
 profile.recent_posts    # list[Article]
 ```
@@ -194,13 +202,11 @@ profile.recent_posts    # list[Article]
 
 ## Rate limiting
 
-Default: 0.5s between requests. Adjust with:
+Default: 0.5s between requests.
 
 ```python
 client = VergeClient(rate_limit_delay=1.0)
 ```
-
----
 
 ## Context manager
 
@@ -211,8 +217,21 @@ with VergeClient() as client:
 
 ---
 
+## How it works
+
+This library combines two data sources:
+
+1. **Subscriber RSS feeds** — The Verge publishes full-text RSS feeds as a subscriber benefit. These provide complete article body HTML, author, timestamps, and keywords with no truncation.
+2. **`__NEXT_DATA__` SSR payloads** — The Verge's Next.js frontend embeds rich structured data in every page, including hero images, subtitles (dek), post type, and pagination. Available via `enrich=True` or `.article()`.
+
+No headless browser, no session spoofing. Just RSS and public SSR data.
+
+---
+
 ## License
 
 MIT. See [LICENSE](LICENSE).
 
-This project is not affiliated with, authorized by, or endorsed by The Verge or Vox Media.
+---
+
+*This project is not affiliated with, authorized by, sponsored by, or endorsed by The Verge or Vox Media, LLC.*
