@@ -2,11 +2,16 @@
 
 from __future__ import annotations
 
+import json
 import re
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
-from typing import Optional
+from typing import TYPE_CHECKING, Any, Optional
 from urllib.parse import urlparse
+
+if TYPE_CHECKING:
+    # Avoid circular import — only used for type hints on fetch_body
+    from .client import VergeClient
 
 
 @dataclass
@@ -35,6 +40,28 @@ class Author:
     @classmethod
     def from_name(cls, name: str) -> "Author":
         return cls(name=name)
+
+    @classmethod
+    def from_dict(cls, d: dict) -> "Author":
+        return cls(
+            name=d.get("name", ""),
+            path=d.get("path", ""),
+            permalink=d.get("permalink", ""),
+            title=d.get("title"),
+            bio=d.get("bio"),
+            profile_image_url=d.get("profile_image_url"),
+            social_links=d.get("social_links", []),
+        )
+
+    def to_dict(self) -> dict:
+        return {
+            "name": self.name,
+            "path": self.path,
+            "permalink": self.permalink,
+            "title": self.title,
+            "bio": self.bio,
+            "profile_image_url": self.profile_image_url,
+        }
 
 
 @dataclass
@@ -79,6 +106,27 @@ class Image:
         alt_m = re.search(r'alt=["\']([^"\']*)["\']', m.group(0))
         return cls(url=src, alt=alt_m.group(1) if alt_m else None)
 
+    @classmethod
+    def from_dict(cls, d: dict | None) -> Optional["Image"]:
+        if not d:
+            return None
+        return cls(
+            url=d.get("url", ""),
+            width=d.get("width"),
+            height=d.get("height"),
+            alt=d.get("alt"),
+            credit=d.get("credit"),
+        )
+
+    def to_dict(self) -> dict:
+        return {
+            "url": self.url,
+            "width": self.width,
+            "height": self.height,
+            "alt": self.alt,
+            "credit": self.credit,
+        }
+
 
 @dataclass
 class Category:
@@ -101,6 +149,18 @@ class Category:
         slug = kw.strip().lower().replace(" ", "-")
         return cls(title=kw.strip(), slug=slug)
 
+    @classmethod
+    def from_dict(cls, d: dict) -> "Category":
+        return cls(
+            id=d.get("id", ""),
+            title=d.get("title", ""),
+            slug=d.get("slug", ""),
+            path=d.get("path", ""),
+        )
+
+    def to_dict(self) -> dict:
+        return {"id": self.id, "title": self.title, "slug": self.slug, "path": self.path}
+
 
 @dataclass
 class AuthorProfile:
@@ -115,6 +175,19 @@ class AuthorProfile:
     social_links: list[dict]
     recent_posts: list["Article"]
     raw: dict = field(default_factory=dict, repr=False)
+
+    def to_dict(self) -> dict:
+        return {
+            "name": self.name,
+            "path": self.path,
+            "permalink": self.permalink,
+            "title": self.title,
+            "bio": self.bio,
+            "profile_image_url": self.profile_image_url,
+            "feed_link": self.feed_link,
+            "social_links": self.social_links,
+            "recent_posts": [p.to_dict() for p in self.recent_posts],
+        }
 
 
 @dataclass
@@ -149,6 +222,10 @@ class Article:
     raw_rss: dict = field(default_factory=dict, repr=False)
     raw_next: dict = field(default_factory=dict, repr=False)
 
+    # ------------------------------------------------------------------
+    # Properties
+    # ------------------------------------------------------------------
+
     @property
     def wp_id(self) -> int:
         m = re.search(r'[?&]p=(\d+)', self.id)
@@ -171,8 +248,24 @@ class Article:
     def is_stream(self) -> bool:
         return self.resource_type == "stream"
 
+    @property
+    def body_text(self) -> str:
+        """Plain text version of body_html — tags stripped, whitespace normalized."""
+        from .utils import html_to_text
+        return html_to_text(self.body_html)
+
+    @property
+    def body_clean(self) -> str:
+        """Cleaned body HTML — tracking params and noisy attributes removed."""
+        from .utils import clean_html
+        return clean_html(self.body_html)
+
+    # ------------------------------------------------------------------
+    # Serialization
+    # ------------------------------------------------------------------
+
     def to_dict(self) -> dict:
-        """Serialize to a plain dict — useful for JSON output."""
+        """Serialize to a JSON-serializable dict."""
         return {
             "id": self.id,
             "wp_id": self.wp_id,
@@ -180,20 +273,104 @@ class Article:
             "permalink": self.permalink,
             "path": self.path,
             "author": self.author,
-            "authors": [{"name": a.name, "permalink": a.permalink} for a in self.authors],
+            "authors": [a.to_dict() for a in self.authors],
             "published_at": self.published_at.isoformat(),
             "updated_at": self.updated_at.isoformat() if self.updated_at else None,
             "summary": self.summary,
             "dek": self.dek,
             "keywords": self.keywords,
-            "categories": [{"title": c.title, "slug": c.slug} for c in self.categories],
+            "categories": [c.to_dict() for c in self.categories],
             "resource_type": self.resource_type,
             "is_live": self.is_live,
-            "hero_image": {
-                "url": self.hero_image.url,
-                "alt": self.hero_image.alt,
-                "width": self.hero_image.width,
-                "height": self.hero_image.height,
-            } if self.hero_image else None,
+            "hero_image": self.hero_image.to_dict() if self.hero_image else None,
             "body_html": self.body_html,
         }
+
+    def to_json(self, indent: Optional[int] = None) -> str:
+        """Serialize to JSON string."""
+        return json.dumps(self.to_dict(), indent=indent, default=str)
+
+    @classmethod
+    def from_dict(cls, d: dict) -> "Article":
+        """Reconstruct an Article from a to_dict() output."""
+        from .utils import parse_dt
+
+        authors = [Author.from_dict(a) for a in (d.get("authors") or [])]
+        categories = [Category.from_dict(c) for c in (d.get("categories") or [])]
+        hero = Image.from_dict(d.get("hero_image"))
+
+        published_at = parse_dt(d.get("published_at")) or datetime.now(timezone.utc)
+        updated_at = parse_dt(d.get("updated_at"))
+
+        return cls(
+            id=d.get("id", ""),
+            title=d.get("title", ""),
+            permalink=d.get("permalink", ""),
+            path=d.get("path", ""),
+            author=d.get("author", ""),
+            authors=authors,
+            published_at=published_at,
+            updated_at=updated_at,
+            summary=d.get("summary", ""),
+            body_html=d.get("body_html", ""),
+            keywords=d.get("keywords", []),
+            categories=categories,
+            resource_type=d.get("resource_type"),
+            dek=d.get("dek"),
+            hero_image=hero,
+            is_live=d.get("is_live", False),
+        )
+
+    @classmethod
+    def from_json(cls, s: str) -> "Article":
+        """Reconstruct an Article from a to_json() string."""
+        return cls.from_dict(json.loads(s))
+
+    # ------------------------------------------------------------------
+    # Lazy body fetching
+    # ------------------------------------------------------------------
+
+    def fetch_body(self, client: Any) -> "Article":
+        """
+        Fetch and attach full body HTML if not already present.
+
+        Use when this article came from __NEXT_DATA__ pagination (page 2+)
+        where body_html is empty. Mutates in place, returns self.
+
+        Parameters
+        ----------
+        client : VergeClient or AsyncVergeClient
+            A client instance to use for fetching. For async, use
+            await article.fetch_body_async(client) instead.
+        """
+        if self.body_html:
+            return self
+        full = client.article(self.permalink)
+        self.body_html = full.body_html
+        if not self.dek:
+            self.dek = full.dek
+        if not self.hero_image:
+            self.hero_image = full.hero_image
+        return self
+
+    async def fetch_body_async(self, client: Any) -> "Article":
+        """
+        Async version of fetch_body. Use with AsyncVergeClient.
+
+        Example
+        -------
+        async with AsyncVergeClient() as c:
+            async for article in c.feed_iter("tech"):
+                if not article.body_html:
+                    await article.fetch_body_async(c)
+                print(article.body_text)
+        """
+        if self.body_html:
+            return self
+        full = await client.article(self.permalink)
+        self.body_html = full.body_html
+        if not self.dek:
+            self.dek = full.dek
+        if not self.hero_image:
+            self.hero_image = full.hero_image
+        return self
