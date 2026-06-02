@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?><feed
+	xmlns="http://www.w3.org/2005/Atom"
+	xmlns:thr="http://purl.org/syndication/thread/1.0"
+	xml:lang="en-US"
+	>
+	<title type="text">Quick Posts | The Verge</title>
+	<subtitle type="text">The Verge is about technology and how it makes us feel. Founded in 2011, we offer our audience everything from breaking news to reviews to award-winning features and investigations, on our site, in video, and in podcasts.</subtitle>
+
+	<updated>2026-06-02T14:32:48+00:00</updated>
+
+	<link rel="alternate" type="text/html" href="https://www.theverge.com" />
+	<id>https://www.theverge.com/rss/quickposts</id>
+	<link rel="self" type="application/atom+xml" href="https://www.theverge.com/rss/quickposts" />
+
+	<icon>https://platform.theverge.com/wp-content/uploads/sites/2/2025/01/verge-rss-large_80b47e.png?w=150&amp;h=150&amp;crop=1</icon>
+		<entry>
+			
+			<author>
+				<name>Andrew Webster</name>
+			</author>
+			
+			<title type="html"><![CDATA[Content stops for nothing.]]></title>
+			<link rel="alternate" type="text/html" href="https://www.theverge.com/entertainment/941629/content-stops-for-nothing" />
+			<id>https://www.theverge.com/?post_type=vm_quickpost&#038;p=941629</id>
+			<updated>2026-06-02T10:32:48-04:00</updated>
+			<published>2026-06-02T10:32:48-04:00</published>
+			<category scheme="https://www.theverge.com" term="Culture" /><category scheme="https://www.theverge.com" term="Entertainment" /><category scheme="https://www.theverge.com" term="Internet Culture" />
+							<summary type="html"><![CDATA[Some advice: follow beetle moses, who never misses.]]></summary>
+			
+							<content type="html">
+											<![CDATA[
+
+						<p class="has-text-align-none">Some advice: follow <a href="https://bsky.app/profile/beetlemoses.bsky.social" data-type="link" data-id="https://bsky.app/profile/beetlemoses.bsky.social">beetle moses</a>, who never misses.</p>
+
+<figure class="wp-block-embed is-type-rich is-provider-bluesky-social wp-block-embed-bluesky-social"><div class="wp-block-embed__wrapper">
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:qlxgxm7fqszfgowm347s2q4t/app.bsky.feed.post/3mncs36nzv22i" data-bluesky-cid="bafyreie4r7s6cb2vagqz5m73ubjofvbh4iakkhaphfztklirqbp2jych2e"><p lang="en"></p>&mdash; <a href="https://bsky.app/profile/did:plc:qlxgxm7fqszfgowm347s2q4t?ref_src=embed">beetle moses (@beetlemoses.bsky.social)</a> <a href="https://bsky.app/profile/did:plc:qlxgxm7fqszfgowm347s2q4t/post/3mncs36nzv22i?ref_src=embed">2026-06-02T14:20:11.467Z</a></blockquote>
+</div></figure>
+						]]>
+									</content>
+			
+					</entry>
+			<entry>
+			
+			<author>
+				<name>Andrew Liszewski</name>
+			</author>
+			
+			<title type="html"><![CDATA[Disney’s new robot carves marble statues for its parks.]]></title>
+			<link rel="alternate" type="text/html" href="https://www.theverge.com/tech/941562/walt-disney-world-marble-carving-robot-grumpy-golf-course" />
+			<id>https://www.theverge.com/?post_type=vm_quickpost&#038;p=941562</id>
+			<updated>2026-06-02T10:22:38-04:00</updated>
+			<published>2026-06-02T10:22:38-04:00</published>
+			<category scheme="https://www.theverge.com" term="News" /><category scheme="https://www.theverge.com" term="Robot" /><category scheme="https://www.theverge.com" term="Tech" />
+							<summary type="html"><![CDATA[Robots have been an important part of Disney’s theme parks for decades, but instead of entertaining guests, this industrial arm is being used to carve intricate marble statues while human sculptors add fine details. The use of marble is more cost-effective, according to Disney, and better suited to surviving Florida weather.]]></summary>
+			
+							<content type="html">
+											<![CDATA[
+
+						
+<figure>
+
+<img alt="A robot arm carves a large block of marble into a statue of Disney’s Grumpy character." data-caption="" data-portal-copyright="Screenshot: &lt;a href=&quot;https://www.youtube.com/watch?v=khNXWahOa1Y&quot;&gt;YouTube&lt;/a&gt;" data-has-syndication-rights="1" src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/disneymarble.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100" />
+	<figcaption>
+		</figcaption>
+</figure>
+<p class="has-text-align-none">Robots have been an important part of Disney’s theme parks for decades, but instead of entertaining guests, this industrial arm is being used to carve intricate marble statues while human sculptors add fine details. The use of marble is more cost-effective, according to Disney, and better suited to surviving Florida weather.</p>
+<div class="youtube-embed"><iframe title="INSIDE Disney’s Groundbreaking Robotic Marble Sculpting | Grumpy&#039;s Gauntlet" src="https://www.youtube.com/embed/khNXWahOa1Y?rel=0" allowfullscreen allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;"></iframe></div>
+						]]>
+									</content>
+			
+					</entry>
+			<entry>
+			
+			<author>
+				<name>Emma Roth</name>
+			</author>
+			
+			<title type="html"><![CDATA[Hyte is launching a cheaper version of its popular Y70 case.]]></title>
+			<link rel="alternate" type="text/html" href="https://www.theverge.com/games/941511/hyte-is-launching-a-cheaper-version-of-its-popular-y70-case" />
+			<id>https://www.theverge.com/?post_type=vm_quickpost&#038;p=941511</id>
+			<updated>2026-06-02T10:22:24-04:00</updated>
+			<published>2026-06-02T10:22:24-04:00</published>
+			<category scheme="https://www.theverge.com" term="Computex" /><category scheme="https://www.theverge.com" term="Gaming" /><category scheme="https://www.theverge.com" term="News" /><category scheme="https://www.theverge.com" term="PC Gaming" /><category scheme="https://www.theverge.com" term="Tech" />
+							<summary type="html"><![CDATA[The company showed off the Y50 RGB during Computex 2026, which costs just $99.99. It supports an array of motherboard sizes and comes with the same three-piece panoramic glass as the pricier Y70. Hyte is just one of the PC component makers grappling with the effects of the RAM crunch, and is likely launching this [&#8230;]]]></summary>
+			
+							<content type="html">
+											<![CDATA[
+
+						<p class="has-text-align-none">The company <a href="https://hyte.com/events/computex?utm_campaign=computex2026&amp;utm_source=pr&amp;utm_medium=referral">showed off the Y50 RGB</a> during Computex 2026, which costs just $99.99. It supports an array of motherboard sizes and comes with the same three-piece panoramic glass as the <a href="https://hyte.com/store/y70/cs-hyte-y70-tm">pricier Y70</a>.</p>
+
+<p class="has-text-align-none">Hyte is just <a href="https://www.theverge.com/games/937699/will-there-still-be-a-desktop-pc-industry-at-this-rate">one of the PC component makers</a> grappling with the effects of the RAM crunch, and is likely launching this more affordable case to offset surging prices.</p>
+
+<div class="image-slider">
+	<div class="image-slider">
+		
+<img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/hyte-y50-rgb-1.avif?quality=90&#038;strip=all&#038;crop=0,16.666666666667,100,66.666666666667" alt="" title="" data-has-syndication-rights="1" data-caption="" data-portal-copyright="Image: Hyte" />
+
+<img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/hyte-y50-rgb-2.avif?quality=90&#038;strip=all&#038;crop=0,16.666666666667,100,66.666666666667" alt="" title="" data-has-syndication-rights="1" data-caption="" data-portal-copyright="Image: Hyte" />
+
+<img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/hyte-y50-rgb-3.avif?quality=90&#038;strip=all&#038;crop=0,16.666666666667,100,66.666666666667" alt="" title="" data-has-syndication-rights="1" data-caption="" data-portal-copyright="Image: Hyte" />
+
+<img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/hyte-y50-rgb-colors.avif?quality=90&#038;strip=all&#038;crop=7.8125,0,84.375,100" alt="" title="" data-has-syndication-rights="1" data-caption="" data-portal-copyright="" />
+	</div>
+</div>
+						]]>
+									</content>
+			
+					</entry>
+			<entry>
+			
+			<author>
+				<name>Antonio G. Di Benedetto</name>
+			</author>
+			
+			<title type="html"><![CDATA[The Snapdragon X2 Elite chip is making its way to a mini-PC.]]></title>
+			<link rel="alternate" type="text/html" href="https://www.theverge.com/tech/941545/the-snapdragon-x2-elite-chip-is-making-its-way-to-a-mini-pc" />
+			<id>https://www.theverge.com/?post_type=vm_quickpost&#038;p=941545</id>
+			<updated>2026-06-02T10:19:55-04:00</updated>
+			<published>2026-06-02T10:14:56-04:00</published>
+			<category scheme="https://www.theverge.com" term="Asus" /><category scheme="https://www.theverge.com" term="Computex" /><category scheme="https://www.theverge.com" term="Desktops" /><category scheme="https://www.theverge.com" term="Tech" />
+							<summary type="html"><![CDATA[Announced at Computex, Asus’s new Ascent QN10 is the first mini-PC to use a Qualcomm Snapdragon X2 Elite. It has quite the port selection, including three USB4 and four USB-A. And it’s under 0.7L in volume, which is about 0.1L smaller than the tiny M4 Mac Mini. But did I mention its power button is [&#8230;]]]></summary>
+			
+							<content type="html">
+											<![CDATA[
+
+						<p class="has-text-align-none">Announced at <a href="https://www.theverge.com/tech/940844/computex-2026">Computex</a>, Asus’s new <a href="https://www.asus.com/displays-desktops/mini-pcs/ascent-series/asus-ascent-qn10/">Ascent QN10</a> is the <a href="https://www.qualcomm.com/news/onq/2026/06/asus-ascent-qn10-snapdragon-x2-elite">first mini-PC to use a Qualcomm Snapdragon X2 Elite</a>. It has <a href="https://dlcdnwebimgs.asus.com/files/media/202605/a8d9b6e8-c68c-4016-ba4d-94a370bdb779/asus-ascent-qn10-datasheet.pdf">quite the port selection</a>, including three USB4 and <em>four</em> USB-A. And it’s under 0.7L in volume, which is about 0.1L smaller than the tiny <a href="https://www.theverge.com/24289730/apple-mac-mini-m4-review">M4 Mac Mini</a>. But did I mention its power button is <em>not </em>on the bottom?</p>
+
+<p class="has-text-align-none">Of course, like <a href="https://www.theverge.com/tech/940221/asus-rog-strix-scar-18-elmb-gaming-laptop-motion-blur-handson-impressions">all of Asus’s</a> <a href="https://www.theverge.com/tech/941318/asus-new-zenbook-14-might-be-another-macbook-neo-competitor-if-the-price-is-right">Computex announcements</a>, price is TBD.</p>
+
+<div class="image-slider">
+	<div class="image-slider">
+		
+<img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/ASUS-QN10-mini-PC-Snapdragon-X2-Elite.png?quality=90&#038;strip=all&#038;crop=7.8009828009828,0,84.398034398034,100" alt="" title="" data-has-syndication-rights="1" data-caption="&lt;em&gt;The Asus Ascent QN10.&lt;/em&gt; | Image: Asus" data-portal-copyright="Image: Asus" />
+
+<img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/fwebp-1.webp?quality=90&#038;strip=all&#038;crop=0,16.666666666667,100,66.666666666667" alt="" title="" data-has-syndication-rights="1" data-caption="&lt;em&gt;Rear ports.&lt;/em&gt; | Image: Asus" data-portal-copyright="Image: Asus" />
+
+<img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/ASUS-QN10_Scenario_AI_Engineer.png?quality=90&#038;strip=all&#038;crop=8.0773955773956,0,83.845208845209,100" alt="" title="" data-has-syndication-rights="1" data-caption="&lt;em&gt;This is how Qualcomm presents this mini-PC in its press release.&lt;/em&gt; | Image: Asus" data-portal-copyright="Image: Asus" />
+
+<img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/Screenshot-2026-06-02-100416.png?quality=90&#038;strip=all&#038;crop=3.177874186551,0,93.644251626898,100" alt="" title="" data-has-syndication-rights="1" data-caption="&lt;em&gt;And this is how Asus presents it. 🤣 I don’t know what’s going on here, but I do hope Asus is paying its model extra for this enthusiasm.&lt;/em&gt; | Image: Asus" data-portal-copyright="Image: Asus" />
+	</div>
+</div>
+						]]>
+									</content>
+			
+					</entry>
+			<entry>
+			
+			<author>
+				<name>Andrew Webster</name>
+			</author>
+			
+			<title type="html"><![CDATA[Time is running out.]]></title>
+			<link rel="alternate" type="text/html" href="https://www.theverge.com/entertainment/941468/time-is-running-out" />
+			<id>https://www.theverge.com/?post_type=vm_quickpost&#038;p=941468</id>
+			<updated>2026-06-02T08:48:00-04:00</updated>
+			<published>2026-06-02T10:00:00-04:00</published>
+			<category scheme="https://www.theverge.com" term="Entertainment" /><category scheme="https://www.theverge.com" term="Streaming" /><category scheme="https://www.theverge.com" term="TV Shows" />
+							<summary type="html"><![CDATA[That’s true both for folks living underground in Silo, Apple TV’s sci-fi series, as you can see in the new trailer. But it’s also true for the show’s creators, who only have two more seasons to wrap-up the sprawling post-apocalyptic story. Season 3 starts streaming on July 3rd.]]></summary>
+			
+							<content type="html">
+											<![CDATA[
+
+						<p class="has-text-align-none">That’s true both for folks living underground in <em>Silo</em>, Apple TV’s sci-fi series, as you can see in the new trailer. But it’s <em>also</em> true for the show’s creators, <a href="https://www.theverge.com/24349341/silo-season-2-finale-review" data-type="link" data-id="https://www.theverge.com/24349341/silo-season-2-finale-review">who only have two more seasons to wrap-up the sprawling post-apocalyptic story</a>. Season 3 starts streaming on July 3rd.</p>
+<div class="youtube-embed"><iframe title="Silo — Season 3 Official Trailer | Apple TV" src="https://www.youtube.com/embed/BLBvbMtjyAQ?rel=0" allowfullscreen allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;"></iframe></div>
+						]]>
+									</content>
+			
+					</entry>
+			<entry>
+			
+			<author>
+				<name>Andrew Webster</name>
+			</author>
+			
+			<title type="html"><![CDATA[Here’s seven minutes of info about Star Fox.]]></title>
+			<link rel="alternate" type="text/html" href="https://www.theverge.com/entertainment/941477/heres-seven-minutes-of-info-about-star-fox" />
+			<id>https://www.theverge.com/?post_type=vm_quickpost&#038;p=941477</id>
+			<updated>2026-06-02T09:07:21-04:00</updated>
+			<published>2026-06-02T09:07:21-04:00</published>
+			<category scheme="https://www.theverge.com" term="Entertainment" /><category scheme="https://www.theverge.com" term="Gaming" /><category scheme="https://www.theverge.com" term="Nintendo" />
+							<summary type="html"><![CDATA[Nintendo just put out a lengthy overview video about the upcoming N64 remake, which continues to look impressive. The game also launches pretty soon: it’ll be out exclusively on the Switch 2 on June 25th.]]></summary>
+			
+							<content type="html">
+											<![CDATA[
+
+						<p class="has-text-align-none">Nintendo just put out a lengthy overview video about <a href="https://www.theverge.com/entertainment/925601/star-fox-nintendo-switch-2" data-type="link" data-id="https://www.theverge.com/entertainment/925601/star-fox-nintendo-switch-2">the upcoming N64 remake</a>, which continues to look impressive. The game also launches pretty soon: it’ll be out exclusively on the Switch 2 on June 25th.</p>
+<div class="youtube-embed"><iframe title="Star Fox — Overview Trailer — Nintendo Switch 2" src="https://www.youtube.com/embed/cWJR_d9gBZ4?rel=0" allowfullscreen allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;"></iframe></div>
+						]]>
+									</content>
+			
+					</entry>
+			<entry>
+			
+			<author>
+				<name>Stevie Bonifield</name>
+			</author>
+			
+			<title type="html"><![CDATA[SK Hynix is planning to double memory production over the next five years.]]></title>
+			<link rel="alternate" type="text/html" href="https://www.theverge.com/gadgets/941478/sk-hynix-is-planning-to-double-production-over-the-next-five-years" />
+			<id>https://www.theverge.com/?post_type=vm_quickpost&#038;p=941478</id>
+			<updated>2026-06-02T09:11:40-04:00</updated>
+			<published>2026-06-02T09:07:19-04:00</published>
+			<category scheme="https://www.theverge.com" term="Chips" /><category scheme="https://www.theverge.com" term="Gadgets" /><category scheme="https://www.theverge.com" term="News" /><category scheme="https://www.theverge.com" term="Tech" />
+							<summary type="html"><![CDATA[As Bloomberg reports, SK Hynix chairman Chey Tae-won says the company will do “whatever it requires” to expand chip production, but that will take years. So, unfortunately for anyone trying to buy a Steam Deck or build a gaming PC right now, the RAM shortage probably isn’t ending anytime soon. ]]></summary>
+			
+							<content type="html">
+											<![CDATA[
+
+						<p class="has-text-align-none">As <a href="https://www.bloomberg.com/news/articles/2026-06-02/sk-hynix-to-double-wafer-capacity-to-ease-memory-chip-crunch"><em>Bloomberg</em></a> reports, SK Hynix chairman Chey Tae-won says the company will do “whatever it requires” to expand chip production, but that will take years. So, unfortunately for anyone trying to buy a <a href="https://www.theverge.com/games/938340/valve-steam-deck-price-increase">Steam Deck</a> or <a href="https://www.theverge.com/games/937699/will-there-still-be-a-desktop-pc-industry-at-this-rate">build a gaming PC</a> right now, the RAM shortage probably isn’t ending anytime soon. </p>
+[Link: SK Hynix Plans to Double Capacity to Ease Memory Chip Crunch | https://www.bloomberg.com/news/articles/2026-06-02/sk-hynix-to-double-wafer-capacity-to-ease-memory-chip-crunch | Bloomberg]
+						]]>
+									</content>
+			
+					</entry>
+			<entry>
+			
+			<author>
+				<name>Thomas Ricker</name>
+			</author>
+			
+			<title type="html"><![CDATA[Leica’s cheaper mini projector will still cost you $2,000.]]></title>
+			<link rel="alternate" type="text/html" href="https://www.theverge.com/gadgets/941392/leicas-cheaper-mini-projector-will-still-cost-you-2000" />
+			<id>https://www.theverge.com/?post_type=vm_quickpost&#038;p=941392</id>
+			<updated>2026-06-02T06:09:14-04:00</updated>
+			<published>2026-06-02T09:00:00-04:00</published>
+			<category scheme="https://www.theverge.com" term="Gadgets" /><category scheme="https://www.theverge.com" term="News" /><category scheme="https://www.theverge.com" term="Tech" />
+							<summary type="html"><![CDATA[For a fraction of Leica’s first $7,900 ultra-short throw projector, the new Cine Compact 1 is built around a triple RGB laser and 360-degree mount to project a 4K image onto walls and ceilings. The all-in-one projector runs the Linux-based VIDAA OS originally developed by Hisense which supports Netflix streaming, AirPlay, and Dolby Vision. Leica [&#8230;]]]></summary>
+			
+							<content type="html">
+											<![CDATA[
+
+						
+<figure>
+
+<img alt="" data-caption="" data-portal-copyright="" data-has-syndication-rights="1" src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/Leica-Cine-Compact-1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100" />
+	<figcaption>
+		</figcaption>
+</figure>
+<p class="has-text-align-none">For a fraction of <a href="https://www.theverge.com/2022/9/1/23332775/leica-cine-1-ust-projector-price-specs-date">Leica’s first $7,900 ultra-short throw projector</a>, the new Cine Compact 1 is built around a triple RGB laser and 360-degree mount to project a 4K image onto walls and ceilings. The all-in-one projector runs the Linux-based VIDAA OS originally developed by Hisense which supports Netflix streaming, AirPlay, and Dolby Vision. Leica says brightness can hit “1,700 lumens,” but fails to say how they’re measured — shame, shame.</p>
+<img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/Leica-Cine-Compact-1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100" alt="The Leica Cine Compact 1" title="The Leica Cine Compact 1" data-has-syndication-rights="1" data-caption="&lt;em&gt;That 360-degree rotation system makes it easy to project from almost any angle.&lt;/em&gt; | Image: Leica" data-portal-copyright="Image: Leica" />
+						]]>
+									</content>
+			
+					</entry>
+			<entry>
+			
+			<author>
+				<name>Andrew Webster</name>
+			</author>
+			
+			<title type="html"><![CDATA[Looking clutch.]]></title>
+			<link rel="alternate" type="text/html" href="https://www.theverge.com/entertainment/941456/looking-clutch" />
+			<id>https://www.theverge.com/?post_type=vm_quickpost&#038;p=941456</id>
+			<updated>2026-06-02T08:37:53-04:00</updated>
+			<published>2026-06-02T08:31:21-04:00</published>
+			<category scheme="https://www.theverge.com" term="Entertainment" /><category scheme="https://www.theverge.com" term="Gaming" />
+							<summary type="html"><![CDATA[Maverick Games, a studio made up of former Forza developers (which was previously working with Amazon), just teased its first title, an open-world racer called Clutch. It looks like a mixture of Forza and Need For Speed, and the studio will be showing more off at SGF Live on Friday.]]></summary>
+			
+							<content type="html">
+											<![CDATA[
+
+						<p class="has-text-align-none">Maverick Games, a studio made up of former <em>Forza</em> developers (<a href="https://www.theverge.com/entertainment/884280/amazon-publishing-deal-maverick-games-forza-cancel" data-type="link" data-id="https://www.theverge.com/entertainment/884280/amazon-publishing-deal-maverick-games-forza-cancel">which was previously working with Amazon</a>), just teased its first title, an open-world racer called <em>Clutch</em>. It looks like a mixture of <em><a href="https://www.theverge.com/entertainment/929816/forza-horizon-6-review-xbox-pc" data-type="link" data-id="https://www.theverge.com/entertainment/929816/forza-horizon-6-review-xbox-pc">Forza</a></em> and <em>Need For Speed</em>, and the studio will be showing more off <a href="https://www.theverge.com/games/939238/video-game-gaming-events-summer-game-fest-schedule-2026" data-type="link" data-id="https://www.theverge.com/games/939238/video-game-gaming-events-summer-game-fest-schedule-2026">at SGF Live on Friday</a>.</p>
+<div class="youtube-embed"><iframe title="Welcome to CLUTCH // Official Reveal" src="https://www.youtube.com/embed/mnTawB_pN6Q?rel=0" allowfullscreen allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;"></iframe></div>
+						]]>
+									</content>
+			
+					</entry>
+			<entry>
+			
+			<author>
+				<name>Jennifer Pattison Tuohy</name>
+			</author>
+			
+			<title type="html"><![CDATA[Switchbot buys Nanoleaf for $40 million.]]></title>
+			<link rel="alternate" type="text/html" href="https://www.theverge.com/tech/941430/switchbot-buys-nanoleaf-for-40-million" />
+			<id>https://www.theverge.com/?post_type=vm_quickpost&#038;p=941430</id>
+			<updated>2026-06-02T08:27:16-04:00</updated>
+			<published>2026-06-02T08:26:09-04:00</published>
+			<category scheme="https://www.theverge.com" term="AI" /><category scheme="https://www.theverge.com" term="News" /><category scheme="https://www.theverge.com" term="Robot" /><category scheme="https://www.theverge.com" term="Smart Home" /><category scheme="https://www.theverge.com" term="Tech" />
+							<summary type="html"><![CDATA[The smart lighting company best known for its modular RGB lighting panels has been acquired by OneRobotics, the parent company of Switchbot. According to a filing on the Hong Kong stock exchange, the purchase will take two years to complete. Nanoleaf just announced a pivot to robotics and AI, an area in which the smart home [&#8230;]]]></summary>
+			
+							<content type="html">
+											<![CDATA[
+
+						<p class="has-text-align-none">The smart lighting company best known for its <a href="https://www.theverge.com/22758017/nanoleaf-lines-review-smart-light-bars">modular RGB lighting panels</a> has been acquired by <a href="https://www.minichart.com.sg/2026/05/16/onerobotics-announces-us40-million-acquisition-of-nanoleaf-to-accelerate-global-embodied-ai-expansion/">OneRobotics</a>, the parent company of <a href="https://www.switch-bot.com/">Switchbot</a>. According to a <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0515/2026051501503.pdf">filing on the Hong Kong stock exchange</a>, the purchase will take two years to complete. </p>
+
+<p class="has-text-align-none"><span>Nanoleaf <a href="https://www.theverge.com/tech/926342/nanoleaf-smart-lighting-ai-robotics-red-light-wellness" target="_blank">just announced a pivot to robotics and AI</a>, an area in which the smart home company Switchbot is heavily involved, <a href="https://www.theverge.com/news/852741/switchbot-onero-h1-humanoid-household-robot-ces-2026" target="_blank">launching its first humanoid household robot</a></span> at CES this year.</p>
+
+<p class="has-text-align-none"></p>
+						]]>
+									</content>
+			
+					</entry>
+	</feed>

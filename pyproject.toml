@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "theverge"
-version = "0.1.0"
+version = "0.2.0"
 description = "Unofficial Python client for The Verge — feed, articles, newsletters, authors."
 readme = "README.md"
 license = { text = "MIT" }
@@ -30,6 +30,12 @@ Issues   = "https://github.com/markthepixel/thevergeapi/issues"
 
 [project.optional-dependencies]
 dev = ["pytest", "pytest-asyncio", "ruff"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+markers = [
+    "integration: hits the real Verge website (run with -m integration)",
+]
 
 [tool.ruff]
 line-length = 100
