@@ -1,5 +1,9 @@
 # theverge-api
 
+[![PyPI](https://img.shields.io/pypi/v/theverge-api)](https://pypi.org/project/theverge-api/)
+[![Python](https://img.shields.io/pypi/pyversions/theverge-api)](https://pypi.org/project/theverge-api/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Unofficial Python client for The Verge. Pull full-text articles, section feeds, newsletters, and author profiles into your own projects.
 
 ---
@@ -23,11 +27,10 @@ By using this library you confirm that you are a current paying subscriber to Th
 ## Install
 
 ```bash
-pip install httpx
-git clone https://github.com/adamnfineco/theverge-api
-cd theverge-api
-pip install -e .
+pip install theverge-api
 ```
+
+Requires Python 3.9+. The only dependency is `httpx`.
 
 ## Quick start
 
